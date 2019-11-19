@@ -1,0 +1,122 @@
+@import './mixins';
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+input {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+  
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.container {
+    max-width: 1500px;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+
+    margin: 0 auto;
+}
+
+.background {
+    height: 100vh;
+    overflow: hidden;
+
+    background-image: url('../images/back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-background {
+    overflow: hidden;
+
+    background-color: #212121;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.register {      
+    width: 237px;
+    height: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    color: #fff;
+    text-transform: uppercase;
+    
+    border-radius: 5px;
+    background: -webkit-linear-gradient( 90deg, rgb(254,9,240) 0%, rgb(95,0,253) 100%);
+
+    cursor: pointer;
+
+    &_big {
+        width: 285px;
+        height: 83px;
+
+        box-shadow: 0 0 40px rgb(254,9,240);
+
+        font-size: 24px;
+    }
+}
+
+.text {
+    text-shadow: 0 0 40px #ff00de, 0 0 8px #ff00de, 0 0 9px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+    text-transform: uppercase;
+    color: #fff;
+
+    line-height: 0.917;
+
+    &__extra-bold {
+        font-weight: 600;
+
+        line-height: 1.183;
+        text-align: center;
+    }
+
+    &_29px {
+        font-size: 29px;
+    }
+
+    &_43px {
+        font-size: 40px;
+    }
+    
+
+    @include breakpoint(450) {
+        &_29px {
+            font-size: 20px;
+        }
+    
+        &_43px {
+            font-size: 30px;
+        }
+    }
+}
+
+.neon-green {
+    text-shadow: 0 0 4px #6ca185, 0 0 8px #6ca185, 0 0 9px #6ca185, 0 0 10px #6ca185, 0 0 15px #6ca185;
+}
